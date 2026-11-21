@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <meta name="theme-color" content="#080a0f">
+  <meta name="description" content="DhakaFlix - Minimal, modern streaming portal for ISP FTP Server (172.16.50.4).">
+  <title>DhakaFlix • Cinema</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Sleek Top Navigation Bar (Full Width, No Clutter) -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#" class="brand-logo" id="homeLogoLink">
+          <span class="brand-dot"></span>
+          <span class="brand-text">Dhaka<span>Flix</span></span>
+        </a>
+
+        <!-- Top Navigation Dropdowns -->
+        <nav class="nav-links" id="mainNavLinks">
+          <!-- Movies Dropdown -->
+          <div class="nav-dropdown">
+            <button class="nav-link-btn" id="moviesMenuBtn">
+              Movies
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu" id="moviesDropdown">
+              <a href="#" class="dropdown-item active" data-url="http://172.16.50.7/DHAKA-FLIX-7/English%20Movies/%282026%29/">
+                <span class="item-title">English Movies 2026</span>
+                <span class="item-badge">New</span>
+              </a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.7/DHAKA-FLIX-7/English%20Movies/%282025%29/">English Movies 2025</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.14/DHAKA-FLIX-14/English%20Movies%20%281080p%29/">English Movies (1080p HD)</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.7/DHAKA-FLIX-7/English%20Movies/">English Movies (All Years)</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.14/DHAKA-FLIX-14/Hindi%20Movies/%282026%29/">
+                <span class="item-title">Hindi Movies 2026</span>
+                <span class="item-badge">New</span>
+              </a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.14/DHAKA-FLIX-14/Hindi%20Movies/">Hindi Movies (All Years)</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.14/DHAKA-FLIX-14/SOUTH%20INDIAN%20MOVIES/South%20Movies/">South Indian Movies</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.14/DHAKA-FLIX-14/SOUTH%20INDIAN%20MOVIES/Hindi%20Dubbed/">South Hindi Dubbed</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.7/DHAKA-FLIX-7/Kolkata%20Bangla%20Movies/">Kolkata Bangla Movies</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.7/DHAKA-FLIX-7/Kolkata%20Bangla%20Movies/Satyajit%20Ray%20Films/">Satyajit Ray Classics</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.14/DHAKA-FLIX-14/Animation%20Movies/">Animation Movies</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.14/DHAKA-FLIX-14/Animation%20Movies%20%281080p%29/">Animation (1080p)</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.7/DHAKA-FLIX-7/Foreign%20Language%20Movies/">Foreign Cinema</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.14/DHAKA-FLIX-14/IMDb%20Top-250%20Movies/">IMDb Top 250</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.7/DHAKA-FLIX-7/3D%20Movies/">3D Movies</a>
+            </div>
+          </div>
+
+          <!-- Series Dropdown -->
+          <div class="nav-dropdown">
+            <button class="nav-link-btn" id="seriesMenuBtn">
+              Series & Shows
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu" id="seriesDropdown">
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.12/DHAKA-FLIX-12/TV-WEB-Series/">TV & Web Series</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.14/DHAKA-FLIX-14/KOREAN%20TV%20%26%20WEB%20Series/">Korean Drama & Series</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.10/DHAKA-FLIX-10/Anime%20%26%20Cartoon%20TV%20Series/">Anime & Cartoons</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.10/DHAKA-FLIX-10/Documentary/">Documentaries</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.10/DHAKA-FLIX-10/WWE%20%26%20AEW%20Wrestling/">WWE & AEW Wrestling</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.10/DHAKA-FLIX-10/Awards%20%26%20TV%20Shows/">Awards & TV Shows</a>
+            </div>
+          </div>
+
+          <!-- Games & Software Dropdown -->
+          <div class="nav-dropdown">
+            <button class="nav-link-btn" id="gamesMenuBtn">
+              Games & Apps
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </button>
+            <div class="dropdown-menu" id="gamesDropdown">
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.8/DHAKA-FLIX-8/PC%20Games/">PC Games</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.8/DHAKA-FLIX-8/Android%20Games/">Android Games</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.8/DHAKA-FLIX-8/Console%20Games/">Console Games</a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.8/DHAKA-FLIX-8/Software/">Software</a>
+              <a href="#" class="dropdown-item" data-url="http://172.16.50.10/DHAKA-FLIX-10/Tutorial/">Tutorials & Training</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Right Navigation Actions -->
+      <div class="nav-right">
+        <!-- Search Pill with Autocomplete -->
+        <div class="search-pill" id="searchPillWrap">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input type="text" id="filterInput" placeholder="Search 7600+ titles..." autocomplete="off">
+          <button id="clearSearchBtn" class="clear-btn" style="display:none;">✕</button>
+        </div>
+
+        <!-- Jump to any URL -->
+        <button id="directUrlBtn" class="nav-icon-btn" title="Open Custom Path or URL">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+        </button>
+
+        <!-- VLC Guide -->
+        <button id="vlcHelpBtn" class="nav-vlc-btn" title="VLC Instructions">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L6 17h12L12 2zm-1.5 5h3l2.25 6h-7.5L10.5 7zM3 19h18v3H3v-3z"/>
+          </svg>
+          <span>VLC</span>
+        </button>
+
+        <!-- View mode -->
+        <div class="view-switch">
+          <button id="gridViewBtn" class="switch-btn active" title="Grid View">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          </button>
+          <button id="listViewBtn" class="switch-btn" title="List View">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle Button -->
+        <button id="mobileMenuBtn" class="nav-icon-btn mobile-only" aria-label="Menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Dropdown Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <span class="drawer-title">DhakaFlix Navigation</span>
+      <button class="drawer-close" id="mobileDrawerClose">✕</button>
+    </div>
+    <div class="drawer-tools" style="padding: 12px 14px 6px; display: flex; gap: 8px;">
+      <button id="mobileVlcHelpBtn" class="btn-subtle" style="flex:1; justify-content:center;">
+        🍿 VLC Guide
+      </button>
+      <button id="mobileDirectUrlBtn" class="btn-subtle" style="flex:1; justify-content:center;">
+        🔗 Custom Path
+      </button>
+    </div>
+    <div class="drawer-body" id="mobileDrawerBody">
+      <!-- Populated dynamically -->
+    </div>
+  </div>
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <!-- ===== HERO SPOTLIGHT BANNER ===== -->
+  <section class="hero-banner" id="heroBanner" style="display:none;">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="hero-backdrop-img" id="heroBackdropImg"></div>
+    <div class="hero-gradient"></div>
+    <div class="hero-inner page-container">
+      <div class="hero-content">
+        <div class="hero-tags" id="heroTags"></div>
+        <h1 class="hero-title" id="heroTitle"></h1>
+        <div class="hero-specs-row" id="heroSpecs"></div>
+        <p class="hero-meta" id="heroMeta"></p>
+        <div class="hero-actions">
+          <button class="hero-btn-play" id="heroBtnPlay">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+            <span>Play Now</span>
+          </button>
+          <button class="hero-btn-vlc" id="heroBtnVlc">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L6 17h12L12 2zm-1.5 5h3l2.25 6h-7.5L10.5 7zM3 19h18v3H3v-3z"/></svg>
+            <span>Instant VLC</span>
+          </button>
+          <button class="hero-btn-info" id="heroBtnInfo" title="View Full Details">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            <span>Details</span>
+          </button>
+        </div>
+      </div>
+      <div class="hero-poster-wrap" id="heroPosterWrap" title="Click to Watch">
+        <div class="hero-poster-glass">
+          <img id="heroPosterImg" src="" alt="Featured Poster" onerror="this.parentElement.style.display='none';" />
+          <div class="hero-poster-badge">ISP CINEMA</div>
+          <div class="hero-poster-play-hint">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="hero-nav-arrow prev" id="heroPrevBtn" aria-label="Previous Slide">‹</button>
+    <button class="hero-nav-arrow next" id="heroNextBtn" aria-label="Next Slide">›</button>
+    <div class="hero-dots" id="heroDots"></div>
+  </section>
+
+  <!-- ===== CONTINUE WATCHING ROW ===== -->
+  <section class="continue-watching-section" id="continueWatchingSection" style="display:none;">
+    <div class="page-container" style="padding-top:0; padding-bottom:0;">
+      <div class="cw-header">
+        <span class="cw-title">⏱ Continue Watching</span>
+        <button class="cw-clear-btn" id="cwClearBtn">Clear all</button>
+      </div>
+      <div class="cw-scroll" id="cwScroll"></div>
+    </div>
+  </section>
+
+  <!-- Main View Container (Full Width, Maximum Space) -->
+  <main class="page-container">
+
+    <!-- Slim Path & Control Bar -->
+    <section class="section-bar">
+      <div class="section-info">
+        <div class="breadcrumbs" id="breadcrumbsBar">
+          <span class="crumb active">Home</span>
+        </div>
+        <div class="title-meta-wrap">
+          <h1 class="active-title" id="currentFolderTitle">English Movies 2026</h1>
+          <span class="active-count" id="currentFolderCount">0 items</span>
+        </div>
+      </div>
+
+      <div class="section-actions">
+        <button id="parentDirBtn" class="btn-subtle" style="display:none;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          Up
+        </button>
+        <div class="sort-wrap">
+          <select id="sortSelect">
+            <option value="date-desc" selected>Newest</option>
+            <option value="name-asc">A to Z</option>
+            <option value="name-desc">Z to A</option>
+            <option value="date-asc">Oldest</option>
+          </select>
+        </div>
+        <button id="refreshBtn" class="btn-icon" title="Refresh">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- Interactive Filter & Category Pills Bar -->
+    <section class="filter-pills-bar" id="filterPillsBar">
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="movie">🎬 Movies</button>
+      <button class="filter-pill" data-filter="series">📺 Web Series</button>
+      <button class="filter-pill" data-filter="1080p">✨ 1080p HD</button>
+      <button class="filter-pill" data-filter="2026">🔥 2026 New</button>
+      <button class="filter-pill" data-filter="hindi">🍿 Hindi</button>
+      <button class="filter-pill" data-filter="south">⚡ South Indian</button>
+      <button class="filter-pill" data-filter="bangla">🇧🇩 Bangla</button>
+      <button class="filter-pill" data-filter="korean">🇰🇷 K-Drama</button>
+      <button class="filter-pill" data-filter="dual">🎧 Dual Audio</button>
+      <button class="filter-pill" data-filter="4k">🌟 4K</button>
+    </section>
+
+    <!-- Loading State -->
+    <div class="state-box" id="loadingState">
+      <div class="spinner"></div>
+      <p>Loading titles...</p>
+    </div>
+
+    <!-- Error State -->
+    <div class="state-box error-box" id="errorState" style="display:none;">
+      <p id="errorMessage">Unable to connect to ISP server</p>
+      <button id="retryBtn" class="btn-retry">Retry</button>
+    </div>
+
+    <!-- Empty State -->
+    <div class="state-box empty-box" id="emptyState" style="display:none;">
+      <p>No titles found in this category.</p>
+    </div>
+
+    <!-- Titles Grid -->
+    <div class="movies-grid grid-mode" id="itemsContainer">
+      <!-- Injected via JavaScript -->
+    </div>
+
+  </main>
+
+  <!-- Movie Quick Play & Info Modal -->
+  <div class="modal" id="movieDetailsModal">
+    <div class="modal-dialog">
+      <div class="modal-banner" id="detailsPosterBanner">
+        <button class="modal-close-btn" id="closeDetailsBtn">✕</button>
+        <div class="banner-gradient">
+          <div class="banner-tags" id="detailsTags"></div>
+          <h2 class="banner-title" id="detailsTitle">Title</h2>
+          <p class="banner-meta" id="detailsMeta"></p>
+        </div>
+      </div>
+
+      <div class="modal-actions-bar">
+        <!-- Direct Launch Buttons -->
+        <button class="btn-play-vlc" id="detailsLaunchVlcBtn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2L6 17h12L12 2zm-1.5 5h3l2.25 6h-7.5L10.5 7zM3 19h18v3H3v-3z"/>
+          </svg>
+          <span>Play in VLC Player</span>
+        </button>
+
+        <button class="btn-play-browser" id="detailsLaunchBrowserBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>
+          <span>Play in Browser</span>
+        </button>
+      </div>
+
+      <div class="modal-aux-bar">
+        <button class="btn-aux" id="detailsDownloadM3uBtn">📥 .M3U File</button>
+        <button class="btn-aux" id="detailsCopyStreamBtn">📋 Copy Link</button>
+        <button class="btn-aux" id="detailsOpenFolderBtn">📁 Explore Files</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-Browser Video Player Modal (Modern Cinema with Web Series Side Panel) -->
+  <div class="player-modal" id="playerModal">
+    <div class="player-box" id="playerBox">
+      <div class="player-header">
+        <div class="player-title-wrap">
+          <span class="player-tag">STREAMING</span>
+          <div class="player-titles">
+            <h3 id="playerMediaTitle">Movie Title</h3>
+            <span id="playerEpisodeSub" class="player-episode-sub" style="display:none;">S01 E01</span>
+          </div>
+        </div>
+        <div class="player-header-right">
+          <button id="playerPrevEpBtn" class="btn-subtle player-nav-btn" style="display:none;" title="Previous Episode">
+            <span>⏮ Prev</span>
+          </button>
+          <button id="playerNextEpBtn" class="btn-subtle player-nav-btn" style="display:none;" title="Play Next Episode">
+            <span>Next ⏭</span>
+          </button>
+          <button id="playerPipBtn" class="btn-pip-pill" title="Picture-in-Picture">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><rect x="13" y="11" width="8" height="6" rx="1" fill="currentColor" stroke="none"/></svg>
+          </button>
+          <button id="playerVlcDirectBtn" class="btn-vlc-pill" title="Instant Play in VLC Media Player">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L6 17h12L12 2zm-1.5 5h3l2.25 6h-7.5L10.5 7zM3 19h18v3H3v-3z"/></svg>
+            <span>Instant VLC</span>
+          </button>
+          <button id="playerCloseBtn" class="btn-close-player" title="Close (Esc)">✕</button>
+        </div>
+      </div>
+
+      <!-- Main Cinema Container: Side-by-Side on Desktop, Stacked on Mobile -->
+      <div class="player-cinema-layout" id="playerCinemaLayout">
+        
+        <!-- Main Video Screen Stage -->
+        <div class="player-stage">
+          <div class="player-viewport">
+            <video id="mainVideoPlayer" controls preload="auto" playsinline></video>
+            
+            <div class="player-buffering" id="videoBuffering" style="display:none;">
+              <div class="spinner"></div>
+            </div>
+
+            <!-- Smart Fallback Banner for AC-3 5.1 / MKV -->
+            <div class="player-fallback" id="mkvUnsupportedBanner" style="display:none;">
+              <div class="fallback-card">
+                <h4>Dolby 5.1 / MKV Notice</h4>
+                <p>Web browsers cannot decode MKV Dolby 5.1 surround sound natively.</p>
+                <button class="btn-play-vlc" id="bannerLaunchVlcBtn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L6 17h12L12 2zm-1.5 5h3l2.25 6h-7.5L10.5 7zM3 19h18v3H3v-3z"/></svg>
+                  <span>Instant Play in VLC Player</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="player-subbar">
+            <div class="subbar-left">
+              <label>Subtitles:</label>
+              <select id="subtitleSelect"><option value="none">Off</option></select>
+              <label class="btn-sub-file">
+                <input type="file" id="externalSubtitleInput" accept=".srt,.vtt">
+                + Subtitle File
+              </label>
+            </div>
+            <div class="subbar-right">
+              <span id="playerResumeBadge" class="resume-badge" style="display:none;">⏱ Resumed</span>
+              <select id="speedSelect">
+                <option value="0.75">0.75x</option>
+                <option value="1" selected>1.0x</option>
+                <option value="1.25">1.25x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2.0x</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Series Side Panel: Season Select Tabs + Episode List (Desktop Side, Mobile Bottom) -->
+        <aside class="player-series-panel" id="playerSeriesPanel" style="display:none;">
+          <div class="series-panel-header">
+            <div class="panel-header-title">
+              <span>Seasons & Episodes</span>
+              <span class="series-ep-count" id="seriesEpCountBadge">0 Ep</span>
+            </div>
+          </div>
+
+          <!-- Season Select Pill Tabs -->
+          <div class="season-tabs-scroll" id="seasonTabsScroll">
+            <!-- Dynamically injected: Season 1, Season 2, etc. -->
+          </div>
+
+          <!-- Episodes Scroll Container -->
+          <div class="episodes-scroll-list" id="episodesScrollList">
+            <!-- Dynamically injected episode cards -->
+          </div>
+        </aside>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Custom URL Jumper Modal -->
+  <div class="modal" id="urlJumperModal">
+    <div class="modal-dialog small-dialog">
+      <div class="modal-simple-header">
+        <h3>Open Custom ISP Path</h3>
+        <button id="closeUrlModalBtn" class="modal-close-btn">✕</button>
+      </div>
+      <div class="modal-simple-body">
+        <input type="text" id="jumpUrlInput" class="input-flat" placeholder="http://172.16.50.7/DHAKA-FLIX-7/..." value="">
+        <div class="preset-wrap">
+          <button class="pill" data-url="http://172.16.50.7/DHAKA-FLIX-7/English%20Movies/%282026%29/">English 2026</button>
+          <button class="pill" data-url="http://172.16.50.14/DHAKA-FLIX-14/Hindi%20Movies/%282026%29/">Hindi 2026</button>
+          <button class="pill" data-url="http://172.16.50.12/DHAKA-FLIX-12/TV-WEB-Series/">TV Series</button>
+          <button class="pill" data-url="http://172.16.50.8/DHAKA-FLIX-8/PC%20Games/">Games</button>
+          <button class="pill" data-url="http://172.16.50.8/DHAKA-FLIX-8/Software/">Software</button>
+        </div>
+      </div>
+      <div class="modal-simple-footer">
+        <button id="cancelUrlModalBtn" class="btn-subtle">Cancel</button>
+        <button id="submitJumpUrlBtn" class="btn-primary">Browse</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- VLC Instructions Modal -->
+  <div class="modal" id="vlcHelpModal">
+    <div class="modal-dialog small-dialog">
+      <div class="modal-simple-header">
+        <h3>Streaming in VLC</h3>
+        <button id="closeVlcModalBtn" class="modal-close-btn">✕</button>
+      </div>
+      <div class="modal-simple-body vlc-steps">
+        <p><strong>1. One-Click Launch (Desktop):</strong> Click <code>Play in VLC</code> and VLC will automatically launch on your computer with full 1080p and 5.1 surround sound.</p>
+        <p><strong>2. Playlist Download (.M3U):</strong> Click <code>.M3U</code> on any movie to download a tiny stream file that opens VLC on double-click.</p>
+        <p><strong>3. Android & TV:</strong> Install VLC for Android. Tapping <code>Play in VLC</code> will prompt your phone to play inside VLC.</p>
+      </div>
+      <div class="modal-simple-footer">
+        <button id="dismissVlcModalBtn" class="btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Autocomplete Dropdown -->
+  <div class="search-autocomplete" id="searchAutocomplete" style="display:none;"></div>
+
+  <!-- Keyboard Shortcut Help Overlay -->
+  <div class="kbd-help-overlay" id="kbdHelpOverlay" style="display:none;">
+    <div class="kbd-help-box">
+      <div class="kbd-help-header">
+        <span>⌨ Keyboard Shortcuts</span>
+        <button id="kbdHelpCloseBtn">✕</button>
+      </div>
+      <div class="kbd-grid">
+        <div class="kbd-row"><kbd>Space</kbd> / <kbd>K</kbd><span>Play / Pause</span></div>
+        <div class="kbd-row"><kbd>F</kbd><span>Fullscreen</span></div>
+        <div class="kbd-row"><kbd>M</kbd><span>Mute / Unmute</span></div>
+        <div class="kbd-row"><kbd>←</kbd> / <kbd>→</kbd><span>Seek ±10s</span></div>
+        <div class="kbd-row"><kbd>↑</kbd> / <kbd>↓</kbd><span>Volume ±10%</span></div>
+        <div class="kbd-row"><kbd>N</kbd><span>Next Episode</span></div>
+        <div class="kbd-row"><kbd>P</kbd><span>Prev Episode</span></div>
+        <div class="kbd-row"><kbd>Esc</kbd><span>Close Player</span></div>
+        <div class="kbd-row"><kbd>?</kbd><span>Show Shortcuts</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Minimal Toast -->
+  <div class="toast" id="toastNotification">
+    <span id="toastMessage">Copied!</span>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
